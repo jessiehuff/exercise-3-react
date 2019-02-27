@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-import PropTypes from 'prop-types'; 
+import {Link} from 'react-router-dom'; 
 import {bindActionCreators} from 'redux'; 
 import { connect } from 'react-redux'; 
 import * as actionCreators from '../actions/index.js'; 
@@ -28,16 +28,29 @@ class Users extends Component {
 
         return( 
             <div className="users">
-                <h1>Users</h1> 
-                <ul className="users_list">
+                <h1 className="users_title">Users</h1> 
+                <div className="users_list">
+                <table>
+                    <tbody>
+                           <tr>
+                               <th>Name</th>
+                               <th>Username</th>
+                               <th>Email</th>
+                               <th>Address</th>
+                            </tr>
                 {alphaUsers.map((user) => {
                     return (
-                       <li key={user.id} className="user_name">
-                        <h3>{user.name}</h3> 
-                        </li>
+                            <tr key={user.id}>
+                                <td><Link to={`/users/${user.id}`}>{user.name}</Link></td>
+                                <td>{user.username}</td> 
+                                <td>{user.email}</td>
+                                <td>{user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}</td> 
+                            </tr>  
                     )
                 })}
-                </ul> 
+                    </tbody>
+                </table>
+                </div> 
             </div>  
         )
     }

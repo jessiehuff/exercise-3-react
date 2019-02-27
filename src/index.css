@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.users_title {
+  margin: 1em; 
+}
+
+table {
+  border-collapse: collapse; 
+}
+
+table, td, th {
+  border: 1px solid black; 
+  margin: 2em; 
+  padding: 2px; 
+}
