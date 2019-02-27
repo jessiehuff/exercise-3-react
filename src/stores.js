@@ -7,8 +7,8 @@ function configureStore() {
   const store = applyMiddleware(thunk)(createStore)(reducers);
 
   if (module.hot) {
-    module.hot.accept('./reducers/usersReducer', function() {
-      const nextRootReducer = require('./reducers/usersReducer').default;
+    module.hot.accept('./reducers', function() {
+      const nextRootReducer = require('./reducers').default;
       store.replaceReducer(nextRootReducer);
     });
   }

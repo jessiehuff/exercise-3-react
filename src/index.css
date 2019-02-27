@@ -26,3 +26,21 @@ table, td, th {
   margin: 2em; 
   padding: 2px; 
 }
+
+.user_info {
+  margin: 4em; 
+  line-height: 60%; 
+}
+
+.specific_detail {
+  font-weight: bold; 
+  display: inline-block; 
+}
+
+.geo {
+  padding-left: 1em; 
+}
+
+.co_detail {
+  padding-left: 1em; 
+}

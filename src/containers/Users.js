@@ -17,8 +17,8 @@ class Users extends Component {
     }
 
     
-    render(){
-        const userArray = Object.keys(this.props).map(i => this.props[i])
+    render(){ 
+        const userArray = this.props.users
         const allUsers = userArray.filter(function(user){return user !== undefined && user.name !== undefined})
         const alphaUsers = allUsers.sort(function(a,b){
             if (a.name < b.name) return -1; 
@@ -57,9 +57,9 @@ class Users extends Component {
 }
 
 
-function mapStateToProps(state){
+function mapStateToProps(state){  
     return {
-        ...state.users
+        users: state.users
     };
 }
 
