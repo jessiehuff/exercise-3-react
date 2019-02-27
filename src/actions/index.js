@@ -1,6 +1,5 @@
 export function fetchUsers(){
     return function(dispatch) {
-        console.log(this)
       return fetch('http://jsonplaceholder.typicode.com/users', {
         headers: {
           'Content-Type': 'json',
