@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { configureStore } from './stores';
+import { configureStore} from './stores';
 import './index.css'; 
 
 
@@ -9,17 +9,17 @@ const store = configureStore();
 const rootEl = document.getElementById('root');
 
 function render() {
-  const Routes = require('./Routes').default;
+  const App = require('./containers/App').default;
   ReactDOM.render(
     <Provider store={store}>
-      <Routes />
+      <App />
     </Provider>,
     rootEl
   );
 }
 
 if (module.hot) {
-  module.hot.accept('./Routes', render);
+  module.hot.accept('./containers/App', render);
 }
 
 render();

@@ -1,22 +1,10 @@
 import React, {Component} from 'react'; 
 import {Link} from 'react-router-dom'; 
-import {bindActionCreators} from 'redux'; 
 import { connect } from 'react-redux'; 
-import * as actionCreators from '../actions/index.js'; 
 
 
 class Users extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            users: []
-        }
-    }
-    componentDidMount(){
-        this.props.actions.fetchUsers(); 
-    }
-
-    
+   
     render(){ 
         const userArray = this.props.users
         const allUsers = userArray.filter(function(user){return user !== undefined && user.name !== undefined})
@@ -57,14 +45,10 @@ class Users extends Component {
 }
 
 
-function mapStateToProps(state){  
+function mapStateToProps(state){    
     return {
         users: state.users
     };
 }
 
-function mapDispatchToProps(dispatch){
-    return {actions: bindActionCreators(actionCreators, dispatch)};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Users); 
+export default connect(mapStateToProps)(Users); 
