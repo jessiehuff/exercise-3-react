@@ -9,7 +9,7 @@ const store = configureStore();
 const rootEl = document.getElementById('root');
 
 function render() {
-  const App = require('./containers/App').default;
+  const App = require('./components/App').default;
   ReactDOM.render(
     <Provider store={store}>
       <App />
@@ -19,7 +19,7 @@ function render() {
 }
 
 if (module.hot) {
-  module.hot.accept('./containers/App', render);
+  module.hot.accept('./components/App', render);
 }
 
 render();

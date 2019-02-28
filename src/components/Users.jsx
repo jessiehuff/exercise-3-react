@@ -9,8 +9,8 @@ class Users extends Component {
         const userArray = this.props.users
         const allUsers = userArray.filter(function(user){return user !== undefined && user.name !== undefined})
         const alphaUsers = allUsers.sort(function(a,b){
-            if (a.name < b.name) return -1; 
-            else if (a.name > b.name) return 1; 
+            if (a.name < b.name) return 1; 
+            else if (a.name > b.name) return -1; 
             else return 0; 
         });
 
