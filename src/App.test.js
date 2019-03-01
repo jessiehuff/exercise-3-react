@@ -22,7 +22,7 @@ if (!process.env.LISTENING_TO_UNHANDLED_REJECTION) {
 }
 
 
-test('should render URL correctly', () => {
+test('should render App correctly', () => {
   const output = shallow(
     <App url="/"/> 
   );
