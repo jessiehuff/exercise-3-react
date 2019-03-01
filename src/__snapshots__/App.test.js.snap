@@ -18,6 +18,12 @@ exports[`App should render users page correctly 1`] = `
 </ContextConsumer>
 `;
 
+exports[`should render App correctly 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
 exports[`should render URL correctly 1`] = `
 <ContextConsumer>
   <Component />

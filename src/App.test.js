@@ -12,16 +12,6 @@ const fetchMock = require('fetch-mock');
 Enzyme.configure({ adapter: new Adapter() })
 
 
-//catch unhandled promise rejections
-if (!process.env.LISTENING_TO_UNHANDLED_REJECTION) {
-  process.on('unhandledRejection', reason => {
-    throw reason
-  })
-  // Avoid memory leak by adding too many listeners
-  process.env.LISTENING_TO_UNHANDLED_REJECTION = true
-}
-
-
 test('should render App correctly', () => {
   const output = shallow(
     <App url="/"/> 
