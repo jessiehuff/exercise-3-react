@@ -6,7 +6,7 @@ import * as actionCreators from '../actions/index';
 import Users from './Users';
 import User from './User'; 
 
-class App extends Component {
+class App extends Component {    
 
     componentDidMount(){
         if (this.props.users.length === 0) {

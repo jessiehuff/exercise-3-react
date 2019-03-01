@@ -13,12 +13,12 @@ class Users extends Component {
             else if (a.name > b.name) return -1; 
             else return 0; 
         });
-
+        debugger 
         return( 
             <div className="users">
                 <h1 className="users_title">Users</h1> 
                 <div className="users_list">
-                <table>
+                <table className="users_table">
                     <tbody>
                            <tr>
                                <th>Name</th>
