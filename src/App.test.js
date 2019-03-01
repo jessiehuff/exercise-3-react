@@ -27,6 +27,7 @@ test('should render Users component', () => {
   expect(shallowToJson(output)).toMatchSnapshot(); 
 });
 
+
 test('should render User component', () => {
   const output = shallow(
     <User url="/users/:userId"/>
